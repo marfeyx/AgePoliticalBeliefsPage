@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Analytics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="logo-emoji">📊</span>
+                <span class="logo-text">voting</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        <div class="hero-content">
+            <h1>young people<br/>don't vote</h1>
+            <p class="subtitle">but like... why tho?</p>
+            <div class="hero-stat">
+                <span class="stat-number">42%</span>
+                <span class="stat-label">ages 18-24 actually show up</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="quick-stats">
+        <div class="container-lg">
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-3">
+                    <div class="quick-stat text-center">
+                        <div class="quick-stat-num">68.2%</div>
+                        <div class="quick-stat-text">total turnout</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="quick-stat text-center">
+                        <div class="quick-stat-num">167M</div>
+                        <div class="quick-stat-text">could vote</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="quick-stat text-center">
+                        <div class="quick-stat-num">+16%</div>
+                        <div class="quick-stat-text">youth growth since 2010</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="quick-stat text-center">
+                        <div class="quick-stat-num">84%</div>
+                        <div class="quick-stat-text">seniors voting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="demographics-section">
+            <div class="container-lg">
+                <h2 class="mb-4">the breakdown by age</h2>
+                <div class="age-chart" style="padding: 2rem; background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color);">
+                    <canvas id="ageChart"></canvas>
+                </div>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="insight h-100">
+                            <span class="emoji">😬</span>
+                            <h3>18-24: basically nobody</h3>
+                            <p>Only 42%. Most don't even register. Those who do? Still don't go. It's a whole thing.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="insight h-100">
+                            <span class="emoji">🤷</span>
+                            <h3>25-54: the middle</h3>
+                            <p>Gets better with age but still lots of people sleeping on voting. 58-75% isn't terrible but could be way higher.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="insight h-100">
+                            <span class="emoji">🎖️</span>
+                            <h3>55+: show up and vote</h3>
+                            <p>85% voting. They just... do it. Every time. Rain or shine. Seriously impressive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trends-section">
+            <div class="container-lg">
+                <h2 class="mb-4">how things changed</h2>
+                <div class="row g-2">
+                    <div class="col-sm-6 col-lg-auto">
+                        <div class="timeline-item">
+                            <span class="year">2010</span>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">young</span>
+                                <span class="timeline-value">35%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">everyone</span>
+                                <span class="timeline-value">58%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">seniors</span>
+                                <span class="timeline-value">78%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-auto">
+                        <div class="timeline-item">
+                            <span class="year">2014</span>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">young</span>
+                                <span class="timeline-value">38%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">everyone</span>
+                                <span class="timeline-value">55%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">seniors</span>
+                                <span class="timeline-value">76%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-auto">
+                        <div class="timeline-item">
+                            <span class="year">2018</span>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">young</span>
+                                <span class="timeline-value">46%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">everyone</span>
+                                <span class="timeline-value">61%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">seniors</span>
+                                <span class="timeline-value">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-auto">
+                        <div class="timeline-item">
+                            <span class="year">2020</span>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">young</span>
+                                <span class="timeline-value">52%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">everyone</span>
+                                <span class="timeline-value">67%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">seniors</span>
+                                <span class="timeline-value">83%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-auto">
+                        <div class="timeline-item current">
+                            <span class="year">2024</span>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">young</span>
+                                <span class="timeline-value">58%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">everyone</span>
+                                <span class="timeline-value">68%</span>
+                            </div>
+                            <div class="timeline-stat">
+                                <span class="timeline-label">seniors</span>
+                                <span class="timeline-value">84%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 2rem; background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); margin-top: 3rem;">
+                    <canvas id="trendsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-section">
+            <div class="container-lg">
+                <h2 class="mb-5">why does this even matter?</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="why-card">
+                            <div class="why-emoji">🗳️</div>
+                            <h3>democratic voice</h3>
+                            <p>when young people don't vote, politicians focus on older demographics. your voice literally determines policy direction.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="why-card">
+                            <div class="why-emoji">📱</div>
+                            <h3>climate action</h3>
+                            <p>you'll live with climate consequences longer. higher youth turnout = more climate-focused policies. it's that simple.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="why-card">
+                            <div class="why-emoji">💰</div>
+                            <h3>economic policy</h3>
+                            <p>student debt, housing costs, job markets - these are shaped by who votes. your generation's future literally depends on it.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="why-card">
+                            <div class="why-emoji">🤝</div>
+                            <h3>collective power</h3>
+                            <p>100M eligible voters aged 18-29. if you all showed up, you'd dominate every election. imagine that.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Voting Data Stuff. Numbers from Census Bureau & Federal Election Commission.</p>
+            <p>Last updated: Feb 2024 - might be outdated by now idk</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Intersection Observer for scroll-triggered animations with later trigger
+        const chartOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -200px 0px'
+        };
+
+        let ageChartInitialized = false;
+        let trendsChartInitialized = false;
+
+        const ageChartObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !ageChartInitialized) {
+                ageChartInitialized = true;
+                initializeAgeChart();
+                ageChartObserver.unobserve(entries[0].target);
+            }
+        }, chartOptions);
+
+        const trendsChartObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !trendsChartInitialized) {
+                trendsChartInitialized = true;
+                initializeTrendsChart();
+                trendsChartObserver.unobserve(entries[0].target);
+            }
+        }, chartOptions);
+
+        // Color configuration for charts
+        const chartTextColor = '#e8eef5';
+        const chartGridColor = '#2a3447';
+        const primaryColor = '#ff6b6b';
+        const secondaryColor = '#4ecdc4';
+        const accentColor = '#ffe66d';
+
+        // Age Breakdown Chart
+        function initializeAgeChart() {
+            const ageCtx = document.getElementById('ageChart');
+            if (!ageCtx) return;
+            
+            new Chart(ageCtx.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
+                    datasets: [{
+                        label: 'Voter Turnout %',
+                        data: [42, 58, 68, 75, 81, 84],
+                        backgroundColor: [
+                            primaryColor,
+                            '#ff7f7f',
+                            secondaryColor,
+                            '#5dddd6',
+                            accentColor,
+                            '#ffd699'
+                        ],
+                        borderColor: chartGridColor,
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    indexAxis: 'x',
+                    animation: {
+                        duration: 800,
+                        easing: 'easeInOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: chartTextColor, font: { size: 12, weight: 'bold' } }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.8)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: primaryColor,
+                            borderWidth: 2,
+                            padding: 12,
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + '% turnout';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                color: chartTextColor,
+                                callback: function(value) { return value + '%'; }
+                            },
+                            grid: { color: chartGridColor }
+                        },
+                        x: {
+                            ticks: { color: chartTextColor, font: { weight: 'bold' } },
+                            grid: { color: chartGridColor }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Trends Over Time Chart
+        function initializeTrendsChart() {
+            const trendsCtx = document.getElementById('trendsChart');
+            if (!trendsCtx) return;
+            
+            new Chart(trendsCtx.getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['2010', '2014', '2018', '2020', '2024'],
+                    datasets: [
+                        {
+                            label: 'Young Voters (18-24)',
+                            data: [35, 38, 46, 52, 58],
+                            borderColor: primaryColor,
+                            backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 6,
+                            pointBackgroundColor: primaryColor,
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointHoverRadius: 8
+                        },
+                        {
+                            label: 'Everyone',
+                            data: [58, 55, 61, 67, 68],
+                            borderColor: secondaryColor,
+                            backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 6,
+                            pointBackgroundColor: secondaryColor,
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointHoverRadius: 8
+                        },
+                        {
+                            label: 'Seniors (65+)',
+                            data: [78, 76, 80, 83, 84],
+                            borderColor: accentColor,
+                            backgroundColor: 'rgba(255, 230, 109, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 6,
+                            pointBackgroundColor: accentColor,
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointHoverRadius: 8
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    interaction: { mode: 'index', intersect: false },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeInOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { 
+                                color: chartTextColor,
+                                font: { size: 13, weight: 'bold' },
+                                padding: 15,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.8)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: primaryColor,
+                            borderWidth: 2,
+                            padding: 12,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                color: chartTextColor,
+                                callback: function(value) { return value + '%'; }
+                            },
+                            grid: { color: chartGridColor }
+                        },
+                        x: {
+                            ticks: { color: chartTextColor, font: { weight: 'bold' } },
+                            grid: { color: chartGridColor }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize observers when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageChartElement = document.getElementById('ageChart');
+            const trendsChartElement = document.getElementById('trendsChart');
+            
+            if (ageChartElement) {
+                ageChartObserver.observe(ageChartElement);
+            }
+            if (trendsChartElement) {
+                trendsChartObserver.observe(trendsChartElement);
+            }
+        });
+    </script>
+</body>
+</html></body>
+</html>
