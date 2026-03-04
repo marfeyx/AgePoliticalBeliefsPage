@@ -153,7 +153,6 @@ main, nav, header, footer, section {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1rem;
-    text-transform: lowercase;
     letter-spacing: -2px;
 }
 
