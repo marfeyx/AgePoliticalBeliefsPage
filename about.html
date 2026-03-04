@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Age & Voting Atlas</title>
+    <meta name="description" content="Methodology and sources used to build the Age and Voting Atlas experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="page-about">
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Age and Voting Atlas Home">
+                <span class="brand-mark">◆</span>
+                <span>Age & Voting Atlas</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav">
+                <a href="index.html">Home</a>
+                <a href="insights.html">Insights</a>
+                <a href="timeline.html">Timeline</a>
+                <a class="active" href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero reveal">
+            <div class="container">
+                <p class="eyebrow">Methodology and context</p>
+                <h1>Built as a visual explanation of age-based voting dynamics.</h1>
+                <p>
+                    This site combines publicly reported turnout patterns with explanatory framing designed for fast understanding,
+                    exploration, and classroom-style discussion.
+                </p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">How to read this site</p>
+                    <h2>Interpretation framework</h2>
+                </div>
+
+                <div class="method-grid">
+                    <article class="method-card">
+                        <h3>1. Turnout first</h3>
+                        <p>Participation differences by age often explain more electoral outcomes than preference shifts alone.</p>
+                    </article>
+                    <article class="method-card">
+                        <h3>2. Cohorts evolve</h3>
+                        <p>Generations do not stay fixed; their priorities and voting habits change across life stages.</p>
+                    </article>
+                    <article class="method-card">
+                        <h3>3. Context matters</h3>
+                        <p>High-salience cycles can temporarily compress turnout gaps before structural patterns re-emerge.</p>
+                    </article>
+                    <article class="method-card">
+                        <h3>4. Signals over absolutes</h3>
+                        <p>The goal is trend interpretation and directional insight, not deterministic forecasting.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Reference links</p>
+                    <h2>Primary data sources used for framing</h2>
+                </div>
+
+                <ul class="source-list">
+                    <li>
+                        <a href="https://ropercenter.cornell.edu/how-groups-voted-2024" target="_blank" rel="noopener noreferrer">Roper Center — How Groups Voted (2024)</a>
+                    </li>
+                    <li>
+                        <a href="https://circle.tufts.edu/2024-election" target="_blank" rel="noopener noreferrer">CIRCLE (Tufts) — Youth Election Insights</a>
+                    </li>
+                    <li>
+                        <a href="https://www.census.gov/topics/public-sector/voting.html" target="_blank" rel="noopener noreferrer">U.S. Census Bureau — Voting and Registration</a>
+                    </li>
+                    <li>
+                        <a href="https://www.fec.gov/" target="_blank" rel="noopener noreferrer">Federal Election Commission</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container">
+                <article class="note-card">
+                    <h3>Project scope</h3>
+                    <p>
+                        This is an educational visualization experience focused on age-related participation and alignment patterns.
+                        It is designed to be readable, engaging, and transparent rather than exhaustive.
+                    </p>
+                    <a class="btn btn-primary" href="index.html">Back to homepage</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>Age & Voting Atlas</p>
+            <p>Methods and sources • Updated <span id="current-year"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

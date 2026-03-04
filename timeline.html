@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline | Age & Voting Atlas</title>
+    <meta name="description" content="Historical timeline of turnout and generational voting behavior shifts.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="page-timeline">
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Age and Voting Atlas Home">
+                <span class="brand-mark">◆</span>
+                <span>Age & Voting Atlas</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav">
+                <a href="index.html">Home</a>
+                <a href="insights.html">Insights</a>
+                <a class="active" href="timeline.html">Timeline</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero reveal">
+            <div class="container">
+                <p class="eyebrow">Trendline narrative</p>
+                <h1>The age turnout gap changed shape—but never disappeared.</h1>
+                <p>
+                    Over the last decade and a half, younger participation has grown in bursts while older voters stayed reliably high.
+                    The result is a narrowing gap with persistent structural differences.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="timeline-stack">
+                    <article class="timeline-entry reveal">
+                        <span class="timeline-year">2008</span>
+                        <div class="timeline-content">
+                            <h3>Digital-era organizing breakout</h3>
+                            <p>Social platforms and online fundraising start to influence turnout behavior at scale.</p>
+                            <div class="timeline-metrics">
+                                <span>18-29: 51%</span>
+                                <span>Overall: 62%</span>
+                                <span>65+: 79%</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry reveal">
+                        <span class="timeline-year">2012</span>
+                        <div class="timeline-content">
+                            <h3>Participation stabilizes after peak cycle</h3>
+                            <p>Younger turnout softens, while older participation remains structurally strong.</p>
+                            <div class="timeline-metrics">
+                                <span>18-29: 45%</span>
+                                <span>Overall: 58%</span>
+                                <span>65+: 77%</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry reveal">
+                        <span class="timeline-year">2016</span>
+                        <div class="timeline-content">
+                            <h3>Polarization intensifies age differences</h3>
+                            <p>Issue salience climbs across generations, but turnout consistency remains age-skewed.</p>
+                            <div class="timeline-metrics">
+                                <span>18-29: 46%</span>
+                                <span>Overall: 60%</span>
+                                <span>65+: 81%</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry reveal">
+                        <span class="timeline-year">2018</span>
+                        <div class="timeline-content">
+                            <h3>Midterm surge among younger voters</h3>
+                            <p>New organizing networks increase youth participation in a non-presidential cycle.</p>
+                            <div class="timeline-metrics">
+                                <span>18-29: 46%</span>
+                                <span>Overall: 61%</span>
+                                <span>65+: 80%</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry reveal">
+                        <span class="timeline-year">2020</span>
+                        <div class="timeline-content">
+                            <h3>Record engagement across all age groups</h3>
+                            <p>High-stakes national context lifts turnout broadly, especially among first-time younger voters.</p>
+                            <div class="timeline-metrics">
+                                <span>18-29: 52%</span>
+                                <span>Overall: 67%</span>
+                                <span>65+: 83%</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry reveal">
+                        <span class="timeline-year">2024</span>
+                        <div class="timeline-content">
+                            <h3>Youth momentum continues, seniors stay dominant</h3>
+                            <p>The age gap narrows in style, not in absolute structure: older voters still lead in consistency.</p>
+                            <div class="timeline-metrics">
+                                <span>18-29: 58%</span>
+                                <span>Overall: 68%</span>
+                                <span>65+: 84%</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Forward scenarios</p>
+                    <h2>What this trajectory could mean next</h2>
+                </div>
+                <div class="scenario-grid">
+                    <article class="glass-card tilt">
+                        <h3>Scenario A: Habit Transfer</h3>
+                        <p>Recent youth participants become regular voters, reducing long-term turnout asymmetry.</p>
+                    </article>
+                    <article class="glass-card tilt">
+                        <h3>Scenario B: Volatile Participation</h3>
+                        <p>Younger turnout remains event-driven, peaking in high-intensity cycles and dropping after.</p>
+                    </article>
+                    <article class="glass-card tilt">
+                        <h3>Scenario C: Issue Realignment</h3>
+                        <p>Parties adapt message strategy by generation, reshaping where age cohorts align politically.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>Age & Voting Atlas</p>
+            <p>Historical turnout intelligence • Updated <span id="current-year"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

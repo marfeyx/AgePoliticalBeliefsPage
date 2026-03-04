@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Age & Voting Atlas</title>
+    <meta name="description" content="Detailed generational insights into turnout, issue priorities, and political alignment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="page-insights">
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Age and Voting Atlas Home">
+                <span class="brand-mark">◆</span>
+                <span>Age & Voting Atlas</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav">
+                <a href="index.html">Home</a>
+                <a class="active" href="insights.html">Insights</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero reveal">
+            <div class="container">
+                <p class="eyebrow">Generation-level breakdown</p>
+                <h1>The age divide is structural, not temporary.</h1>
+                <p>
+                    Different age groups are shaped by distinct media ecosystems, policy priorities, and life-stage pressures—so they show up and vote differently.
+                </p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container insight-grid">
+                <article class="insight-card tilt">
+                    <h3>Registration Friction</h3>
+                    <p>First-time voters face paperwork and timing barriers that older habitual voters already solved years ago.</p>
+                    <span class="chip">Strongest impact: under 30</span>
+                </article>
+                <article class="insight-card tilt">
+                    <h3>Issue Compression</h3>
+                    <p>Younger voters prioritize cost-of-living and climate urgency, while older voters emphasize stability and institutional continuity.</p>
+                    <span class="chip">Cross-generational tension</span>
+                </article>
+                <article class="insight-card tilt">
+                    <h3>Campaign Attention</h3>
+                    <p>Parties target high-propensity voters first, reinforcing turnout advantages among older cohorts.</p>
+                    <span class="chip">Feedback loop effect</span>
+                </article>
+                <article class="insight-card tilt">
+                    <h3>Local Embeddedness</h3>
+                    <p>Long-term residence and deeper community ties increase awareness of elections and local stakes.</p>
+                    <span class="chip">Highest in 45+</span>
+                </article>
+                <article class="insight-card tilt">
+                    <h3>Digital Mobilization</h3>
+                    <p>Rapid-response organizing on social platforms can create sudden spikes in youth turnout during high-salience cycles.</p>
+                    <span class="chip">Fast but volatile</span>
+                </article>
+                <article class="insight-card tilt">
+                    <h3>Trust & Efficacy</h3>
+                    <p>People vote more when they believe institutions still respond to civic participation.</p>
+                    <span class="chip">Core turnout driver</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Signal map</p>
+                    <h2>What each generation rewards at the ballot box</h2>
+                </div>
+
+                <div class="signal-grid">
+                    <article class="signal-card">
+                        <h3>18-29 Priorities</h3>
+                        <ul class="signal-list">
+                            <li><span>Housing affordability</span><strong>High</strong></li>
+                            <li><span>Climate policy</span><strong>High</strong></li>
+                            <li><span>Education cost</span><strong>High</strong></li>
+                            <li><span>Institutional trust</span><strong>Medium</strong></li>
+                        </ul>
+                    </article>
+
+                    <article class="signal-card">
+                        <h3>30-44 Priorities</h3>
+                        <ul class="signal-list">
+                            <li><span>Wage growth</span><strong>High</strong></li>
+                            <li><span>Childcare access</span><strong>High</strong></li>
+                            <li><span>Healthcare costs</span><strong>High</strong></li>
+                            <li><span>Tax stability</span><strong>Medium</strong></li>
+                        </ul>
+                    </article>
+
+                    <article class="signal-card">
+                        <h3>45+ Priorities</h3>
+                        <ul class="signal-list">
+                            <li><span>Retirement security</span><strong>High</strong></li>
+                            <li><span>Public safety</span><strong>High</strong></li>
+                            <li><span>Healthcare continuity</span><strong>High</strong></li>
+                            <li><span>Civic institutions</span><strong>High</strong></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="container jump-grid">
+                <a class="jump-card" href="timeline.html">
+                    <p>Next</p>
+                    <h3>See how these patterns evolved over time</h3>
+                    <span>Go to timeline →</span>
+                </a>
+                <a class="jump-card" href="about.html">
+                    <p>Method</p>
+                    <h3>Review sources and interpretation framework</h3>
+                    <span>Go to about →</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>Age & Voting Atlas</p>
+            <p>Generational behavior intelligence • Updated <span id="current-year"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

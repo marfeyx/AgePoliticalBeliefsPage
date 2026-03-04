@@ -3,229 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voting Analytics</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Age & Voting Atlas</title>
+    <meta name="description" content="An immersive, animated data story about how age shapes voting behavior in the United States.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="logo-section">
-            <span class="logo-emoji">📊</span>
-            <span class="logo-text">How age affects voting in america</span>
-        </div>
-    </nav>
+<body class="page-home">
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
-    <header class="hero">
-        <div class="hero-bg">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-        </div>
-        <div class="hero-content">
-            <h1>Older people are<br/>more conservative</h1>
-            <p class="subtitle">But why?</p>
-            <div class="hero-stat">
-                <span class="stat-number">11%</span>
-                <span class="stat-label">More republican votes for older voters</span>
-                // https://ropercenter.cornell.edu/how-groups-voted-2024?utm_
-            </div>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Age and Voting Atlas Home">
+                <span class="brand-mark">◆</span>
+                <span>Age & Voting Atlas</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav">
+                <a class="active" href="index.html">Home</a>
+                <a href="insights.html">Insights</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="about.html">About</a>
+            </nav>
         </div>
     </header>
 
-    <section class="quick-stats">
-        <div class="container">
-            <div class="stats-row">
-                <div class="quick-stat">
-                    <div class="quick-stat-num">47%</div>
-                    <div class="quick-stat-text">of young people voted</div>
-                </div>
-                <div class="quick-stat">
-                    <div class="quick-stat-num">70%</div>
-                    <div class="quick-stat-text">of older people voted</div>
-                </div>
-                <div class="quick-stat">
-                    <div class="quick-stat-num">11%</div>
-                    <div class="quick-stat-text">more votes for republican parties for people after the age of 65</div>
-                </div>
-                // https://circle.tufts.edu/2024-election?utm_
-                // https://www.reddit.com/r/dataisbeautiful/comments/1nq6168/us_voter_turnout_in_the_2024_presidential/?utm_
-            </div>
-        </div>
-    </section>
-
     <main>
-        <section class="demographics-section">
-            <div class="container">
-                <h2>votes for republican parties by age</h2>
-                <div class="age-chart">
-                    <div class="age-row">
-                        <div class="age-label">18-29</div>
-                        <div class="age-bar-container">
-                            <div class="age-bar" style="--percentage: 42%"></div>
-                        </div>
-                        <div class="age-percent">43%</div>
-                    </div>
-                    <div class="age-row">
-                        <div class="age-label">30-44</div>
-                        <div class="age-bar-container">
-                            <div class="age-bar" style="--percentage: 58%"></div>
-                        </div>
-                        <div class="age-percent">47%</div>
-                    </div>
-                    <div class="age-row">
-                        <div class="age-label">45-64</div>
-                        <div class="age-bar-container">
-                            <div class="age-bar" style="--percentage: 68%"></div>
-                        </div>
-                        <div class="age-percent">54%</div>
-                    </div>
-                    <div class="age-row">
-                        <div class="age-label">65+</div>
-                        <div class="age-bar-container">
-                            <div class="age-bar" style="--percentage: 75%"></div>
-                        </div>
-                        <div class="age-percent">50%</div>
+        <section class="hero reveal">
+            <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-c" aria-hidden="true"></div>
+            <div class="hero-particles" aria-hidden="true"></div>
+
+            <div class="container hero-layout">
+                <div class="hero-copy" data-parallax="10">
+                    <p class="eyebrow">Immersive data narrative • United States</p>
+                    <h1>Age doesn’t just predict turnout. It reshapes the entire political map.</h1>
+                    <p class="lead">
+                        Older voters remain the most consistent bloc, but younger generations are accelerating and changing the issues that dominate election cycles.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="insights.html">Explore insights</a>
+                        <a class="btn btn-ghost" href="timeline.html">See full timeline</a>
                     </div>
                 </div>
 
-                <div class="age-insights">
-                    <div class="insight">
-                        <span class="emoji">😬</span>
-                        <h3>18-29: basically nobody</h3>
-                        <p>Only 43%. Most don't even register. Those who do? Still don't go. It's a whole thing.</p>
+                <aside class="hero-panel reveal tilt">
+                    <h2>2024 by the numbers</h2>
+                    <div class="mini-metric">
+                        <span>Youth turnout</span>
+                        <strong>58%</strong>
                     </div>
-                    <div class="insight">
-                        <span class="emoji">🤷</span>
-                        <h3>30-44: the middle</h3>
-                        <p>Gets better with age but still lots of people sleeping on voting. 58-75% isn't terrible but could be way higher.</p>
+                    <div class="mini-metric">
+                        <span>Overall turnout</span>
+                        <strong>68%</strong>
                     </div>
-                    <div class="insight">
-                        <span class="emoji">🎖️</span>
-                        <h3>55+: show up and vote</h3>
-                        <p>85% voting. They just... do it. Every time. Rain or shine. Seriously impressive.</p>
+                    <div class="mini-metric">
+                        <span>65+ turnout</span>
+                        <strong>84%</strong>
                     </div>
-                </div>
+                    <div class="micro-chart">
+                        <div class="micro-row">
+                            <span>18-29</span>
+                            <div class="micro-track"><i class="micro-fill" style="--fill: 58%"></i></div>
+                        </div>
+                        <div class="micro-row">
+                            <span>30-44</span>
+                            <div class="micro-track"><i class="micro-fill" style="--fill: 66%"></i></div>
+                        </div>
+                        <div class="micro-row">
+                            <span>45-64</span>
+                            <div class="micro-track"><i class="micro-fill" style="--fill: 76%"></i></div>
+                        </div>
+                        <div class="micro-row">
+                            <span>65+</span>
+                            <div class="micro-track"><i class="micro-fill" style="--fill: 84%"></i></div>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </section>
-        // https://ropercenter.cornell.edu/how-groups-voted-2024
 
-        <section class="trends-section">
+        <section class="section stats reveal">
+            <div class="container stats-grid">
+                <article class="stat-card tilt">
+                    <p class="stat-value"><span class="counter" data-target="84">0</span>%</p>
+                    <p class="stat-label">Turnout among Americans 65+</p>
+                </article>
+                <article class="stat-card tilt">
+                    <p class="stat-value"><span class="counter" data-target="26">0</span> pts</p>
+                    <p class="stat-label">Gap between youngest and oldest voters</p>
+                </article>
+                <article class="stat-card tilt">
+                    <p class="stat-value"><span class="counter" data-target="11">0</span>%</p>
+                    <p class="stat-label">Higher Republican lean among 65+ vs under-30</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section age-split reveal" id="age-split">
             <div class="container">
-                <h2>how things changed</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="year">2010</span>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">young</span>
-                            <span class="timeline-value">35%</span>
+                <div class="section-heading">
+                    <p class="eyebrow">Turnout intensity</p>
+                    <h2>Participation rises with age—and does so sharply</h2>
+                </div>
+
+                <div class="progress-list">
+                    <article class="progress-row">
+                        <div>
+                            <h3>18-29</h3>
+                            <p>Mobilized by social issues, but less habitual voting behavior.</p>
                         </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">everyone</span>
-                            <span class="timeline-value">58%</span>
+                        <div class="progress-track"><span class="progress-fill" style="--value: 58%"></span></div>
+                        <strong>58%</strong>
+                    </article>
+
+                    <article class="progress-row">
+                        <div>
+                            <h3>30-44</h3>
+                            <p>Turnout grows as economic and family stakes increase.</p>
                         </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">seniors</span>
-                            <span class="timeline-value">78%</span>
+                        <div class="progress-track"><span class="progress-fill" style="--value: 66%"></span></div>
+                        <strong>66%</strong>
+                    </article>
+
+                    <article class="progress-row">
+                        <div>
+                            <h3>45-64</h3>
+                            <p>Voting becomes a highly consistent civic routine.</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="year">2014</span>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">young</span>
-                            <span class="timeline-value">38%</span>
+                        <div class="progress-track"><span class="progress-fill" style="--value: 76%"></span></div>
+                        <strong>76%</strong>
+                    </article>
+
+                    <article class="progress-row">
+                        <div>
+                            <h3>65+</h3>
+                            <p>The highest and most reliable participation rate in the electorate.</p>
                         </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">everyone</span>
-                            <span class="timeline-value">55%</span>
-                        </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">seniors</span>
-                            <span class="timeline-value">76%</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="year">2018</span>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">young</span>
-                            <span class="timeline-value">46%</span>
-                        </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">everyone</span>
-                            <span class="timeline-value">61%</span>
-                        </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">seniors</span>
-                            <span class="timeline-value">80%</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="year">2020</span>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">young</span>
-                            <span class="timeline-value">52%</span>
-                        </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">everyone</span>
-                            <span class="timeline-value">67%</span>
-                        </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">seniors</span>
-                            <span class="timeline-value">83%</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item current">
-                        <span class="year">2024</span>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">young</span>
-                            <span class="timeline-value">58%</span>
-                        </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">everyone</span>
-                            <span class="timeline-value">68%</span>
-                        </div>
-                        <div class="timeline-stat">
-                            <span class="timeline-label">seniors</span>
-                            <span class="timeline-value">84%</span>
-                        </div>
-                    </div>
+                        <div class="progress-track"><span class="progress-fill" style="--value: 84%"></span></div>
+                        <strong>84%</strong>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="why-section">
+        <section class="section pillars reveal">
             <div class="container">
-                <h2>why is this happening?</h2>
-                <div class="why-grid">
-                    <div class="why-card">
-                        <div class="why-number">1</div>
-                        <h3>Habit</h3>
-                        <p>Old people = lifetime voters. Young people = first time ever maybe? Habits stick.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-number">2</div>
-                        <h3>Stability</h3>
-                        <p>Older folks own homes, have families, roots in communities. They care who's running things.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-number">3</div>
-                        <h3>Awareness</h3>
-                        <p>Campaigns target people who've voted before. Young people fall off the radar.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-number">4</div>
-                        <h3>It's Growing Though</h3>
-                        <p>Young voters are rising. 2018 was a bump. Social media engagement = real votes now.</p>
-                    </div>
+                <div class="section-heading">
+                    <p class="eyebrow">What drives the gap</p>
+                    <h2>Four forces behind age-based voting differences</h2>
                 </div>
+
+                <div class="pillars-grid">
+                    <article class="glass-card tilt">
+                        <h3>Habit Formation</h3>
+                        <p>People who vote repeatedly are very likely to keep voting across decades.</p>
+                    </article>
+                    <article class="glass-card tilt">
+                        <h3>Institutional Trust</h3>
+                        <p>Older demographics often show stronger trust in formal institutions and elections.</p>
+                    </article>
+                    <article class="glass-card tilt">
+                        <h3>Life Stability</h3>
+                        <p>Homeownership, local ties, and fixed routines increase political participation.</p>
+                    </article>
+                    <article class="glass-card tilt">
+                        <h3>Digital Mobilization</h3>
+                        <p>Younger voters respond to online organizing, creating fast cycle-to-cycle swings.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section jump-links reveal">
+            <div class="container jump-grid">
+                <a class="jump-card" href="insights.html">
+                    <p>Deep analysis</p>
+                    <h3>Read age-by-age behavior insights</h3>
+                    <span>Open page →</span>
+                </a>
+                <a class="jump-card" href="timeline.html">
+                    <p>Historic trends</p>
+                    <h3>Track turnout and alignment over time</h3>
+                    <span>Open page →</span>
+                </a>
+                <a class="jump-card" href="about.html">
+                    <p>Methodology</p>
+                    <h3>See how this analysis is assembled</h3>
+                    <span>Open page →</span>
+                </a>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Voting Data Stuff. Numbers from Census Bureau & Federal Election Commission.</p>
-            <p>Last updated: Feb 2024 - might be outdated by now idk</p>
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>Age & Voting Atlas</p>
+            <p>Animated civic intelligence experience • Updated <span id="current-year"></span></p>
         </div>
     </footer>
 </body>
